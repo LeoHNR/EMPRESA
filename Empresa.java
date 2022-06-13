@@ -1,5 +1,6 @@
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class Empresa {
   String nombre;
@@ -14,10 +15,13 @@ public class Empresa {
     public void contratar(String nombre,int sueldo){
        empleados[numEmpleados]=new Empleado(nombre, sueldo);
        numEmpleados++;
+       
     }
     public void mostrarempleados(){
         System.out.println("\t\t lista de empleados");
-        System.out.println(empleados.toString());
+        for(int i=0;i<numEmpleados;i++){
+            System.out.println(empleados[i]);
+        }
     }
     public void agregarClientes(Cliente cliente){
         clientes.add(cliente);
