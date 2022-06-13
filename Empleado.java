@@ -24,7 +24,10 @@ public class Empleado{
     public void setSueldo(int sueldo) {
         this.sueldo = sueldo;
     }
-
+    @Override
+    public String toString(){
+        return "EMPLEADO: "+nombre + "  SUELDO: "+sueldo;
+    }
     
     
 }

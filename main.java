@@ -3,6 +3,7 @@ public class main {
         Empresa listaEmpresa=new Empresa("farmacia");
         Empleado nuevoEmpleado=new Empleado(1200, "hector");
         Empleado nuevoEmpleado1=new Empleado(1500, "leonel");
+        
         listaEmpresa.contratar(nuevoEmpleado);
         listaEmpresa.contratar(nuevoEmpleado1);
         listaEmpresa.imprimirLista();
