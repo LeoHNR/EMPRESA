@@ -3,7 +3,7 @@ public class main {
      Empresa empresa=new Empresa("UNAH");
      empresa.agregarClientes(new Cliente("Leo"));
      empresa.agregarClientes(new Cliente("juan"));
-     empresa.contratar(new Empleado("teto", 1500));
+     empresa.contratar("Pedro", 1200);
      empresa.mostrarClientes();
      empresa.mostrarempleados();
     }

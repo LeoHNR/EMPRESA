@@ -3,15 +3,17 @@ import java.util.HashSet;
 
 public class Empresa {
   String nombre;
-  HashSet<Empleado> empleados=new HashSet<Empleado>();
+  private Empleado[] empleados;
+  private int numEmpleados=0;
     HashSet<Cliente> clientes=new HashSet<Cliente>();
 
     public Empresa(String nombre) {
         this.nombre = nombre;
+        empleados=new Empleado[4];
     }
-    public void contratar(Empleado empleado){
-        empleados.add(empleado);
-        empleado.setEmpresa(this);
+    public void contratar(String nombre,int sueldo){
+       empleados[numEmpleados]=new Empleado(nombre, sueldo);
+       numEmpleados++;
     }
     public void mostrarempleados(){
         System.out.println("\t\t lista de empleados");
