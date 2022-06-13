@@ -1,15 +1,22 @@
-public class Cliente {
-    //Atributos
+public class Cliente{
     private String nombre;
-
-    //Construtor
+    Empresa empresa;
     public Cliente(String nombre) {
         this.nombre = nombre;
     }
-
-    //Metodos
-    public void mostrar(){
-        System.out.println("Nombre del cliente: "+nombre);
+    public Empresa getEmpresa() {
+        return empresa;
     }
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+    @Override
+    public String toString() {
+        return "Cliente [empresa=" + empresa + ", nombre=" + nombre + "]"+"\n";
+    }
+  
+    
+    
+    
     
 }

@@ -1,33 +1,23 @@
-public class Empleado{
-    //atributos
+public class Empleado {
     private String nombre;
     private int sueldo;
-    //Constructor
-    public Empleado(int sueldo, String nombre) {
+    Empresa empresa;
+    public Empleado(String nombre, int sueldo) {
         this.nombre = nombre;
         this.sueldo = sueldo;
+        this.setEmpresa(empresa);
     }
-    //Metodos
-    public void mostrar(){
-        System.out.println("La cantidad de sueldo es: "+ sueldo);
-        System.out.println("Nombre: " + nombre);
+    public Empresa getEmpresa() {
+        return empresa;
     }
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public int getSueldo() {
-        return sueldo;
-    }
-    public void setSueldo(int sueldo) {
-        this.sueldo = sueldo;
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
     @Override
-    public String toString(){
-        return "EMPLEADO: "+nombre + "  SUELDO: "+sueldo;
+    public String toString() {
+        return "Empleado [empresa=" + empresa + ", nombre=" + nombre + ", sueldo=" + sueldo + "]"+"\n";
     }
     
+
     
 }
